@@ -22,12 +22,14 @@ const DB_CONNECTION = process.env.DB_CONNECTION;
 
 app.use(express.json());
 
+const frontDir = path.join(__dirname, '../front');
+
+app.use(express.static(frontDir));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(frontDir, 'club.html'));
 });
 
-const frontDir = path.join(__dirname, '../front');
-app.use(express.static(frontDir));
 
 const uploadsDir = path.join(__dirname, 'uploads');
 app.use('/uploads', express.static(uploadsDir));
