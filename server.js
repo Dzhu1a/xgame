@@ -22,7 +22,7 @@ const DB_CONNECTION = process.env.DB_CONNECTION;
 
 app.use(express.json());
 
-const frontDir = path.join(__dirname, '../front');
+const frontDir = path.join(__dirname, '../Front');
 
 app.use(express.static(frontDir));
 
