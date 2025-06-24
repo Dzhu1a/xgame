@@ -1,0 +1,17 @@
+.container-sort {
+  position: absolute;
+  top: 85px;
+  right: 11%;
+  z-index: 3;
+  height: 80px;
+  border: 2px solid #E0E0E0; /* Light gray border */
+  display: none;
+  background-color: #FFFFFF; /* White background */
+}
+.max, .min {
+  margin-top: -16px;
+  height: 50%;
+}
+.max:hover, .min:hover {
+  background-color: #FFC107; /* Yellow on hover */
+}

@@ -1,0 +1,100 @@
+.container-korz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Kept semi-transparent black for overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
+.basket {
+  background-color: #FFFFFF; /* White background */
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Kept shadow for depth */
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333333; /* Dark gray background */
+  color: #FFFFFF; /* White text */
+}
+.cart-header h2 {
+  margin: 0;
+}
+.close-cart {
+  background: none;
+  border: none;
+  color: #FFFFFF; /* White text */
+  font-size: 24px;
+  cursor: pointer;
+}
+.cart-items {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #E0E0E0; /* Light gray border */
+  padding-bottom: 15px;
+}
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.item-details {
+  flex-grow: 1;
+}
+.item-details h4 {
+  margin: 0 0 10px 0;
+  color: #000000; /* Black text */
+}
+.item-details p {
+  margin: 5px 0;
+  color: #333333; /* Dark gray text */
+}
+.remove-item {
+  background-color: #FFC107; /* Yellow button */
+  color: #000000; /* Black text */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cart-footer {
+  padding: 15px;
+  border-top: 1px solid #E0E0E0; /* Light gray border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-button {
+  background-color: #FFC107; /* Yellow button */
+  color: #000000; /* Black text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.checkout-button:hover, .remove-item:hover {
+  opacity: 0.8;
+}
+.item-details input {
+  display: inline-block;
+  padding: 5px 0;
+  border: 1px solid #333333; /* Dark gray border */
+}

@@ -1,0 +1,143 @@
+.carts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 96%;
+  justify-content: start;
+  margin-top: 30px;
+  margin-left: 55px;
+  gap: 20px;
+  
+}
+.clothes {
+  background-color: #FFFFFF; /* White background */
+  width: 340px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+.clothes img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+}
+@media screen and (max-width: 320px) {
+  .clothes {
+    margin-left: -17%;
+  }
+}
+@media screen and (min-width: 319px) and (max-width: 374px) {
+  .clothes {
+    margin-left: -15%;
+  }
+}
+@media screen and (min-width: 374px) and (max-width: 424px) {
+  .clothes {
+    margin-left: -5%;
+  }
+}
+@media screen and (min-width: 424px) and (max-width: 620px) {
+  .clothes {
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 800px) {
+  .clothes {
+    margin-left: -10px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .clothes {
+    width: 120%;
+    margin-left: -10px;
+  }
+}
+@media screen and (min-width: 708px) and (max-width: 1270px) {
+  .clothes {
+    flex: 0 1 calc(40% - 10px);
+    margin-left: 3%;
+  }
+}
+@media screen and (min-width: 1270px) {
+  .clothes {
+    flex: 0 1 calc(25% - 10px);
+  }
+}
+.manufacturer {
+  font-weight: bold;
+  color: #000000; /* Black text */
+}
+.clothes p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-top: 5px;
+  color: #333333; /* Dark gray text */
+}
+.prays {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+.clothes > button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.admin-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -25px;
+  display: none;
+}
+.buy-button {
+  margin-left: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 40%;
+  height: 40px;
+  background-color: #FFC107; /* Yellow button */
+  color: #000000; /* Black text */
+  width: max-content + 5px;
+}
+.edit-button {
+  background-color: #E0E0E0; /* Light gray background */
+  color: #000000; /* Black text */
+  display: none;
+  width: max-content;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  width: max-content;
+  padding: 0;
+  padding-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 20px;
+}
+.delete-button {
+  background-color: #E0E0E0; /* Light gray background */
+  color: #000000; /* Black text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin-left: 10px;
+  margin-top: 20px;
+  padding-top: 2px;
+  border: none;
+  box-sizing: border-box;
+  width: max-content;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 30px;
+}
+button:hover {
+  opacity: 0.8;
+}
+.price {
+  font-size: 18px !important;
+  margin-top: 30px !important;
+  color: #000000; /* Black text */
+}

@@ -1,0 +1,80 @@
+.profile-container {
+  width: 95%;
+  height: 450px;
+  margin: 200px auto;
+  padding: 20px;
+  border: 1px solid #E0E0E0; /* Light gray border */
+  border-radius: 5px;
+  background-color: #FFFFFF; /* White background */
+  z-index: 1;
+  display: none;
+}
+.profile-details p {
+  margin: 10px 0;
+  color: #333333; /* Dark gray text */
+}
+button {
+  padding: 10px 20px;
+  background-color: #333333; /* Dark gray background */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #FFC107; /* Yellow on hover */
+}
+.modalWindow {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Kept semi-transparent black for overlay */
+}
+.modalWindow-content {
+  background-color: #FFFFFF; /* White background */
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #E0E0E0; /* Light gray border */
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+.closeWindow {
+  color: #333333; /* Dark gray text */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeWindow:hover,
+.closeWindow:focus {
+  color: #000000; /* Black text */
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalWindow form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin: 10px 0 5px;
+  color: #000000; /* Black text */
+}
+input {
+  padding: 10px;
+  border: 1px solid #E0E0E0; /* Light gray border */
+  border-radius: 5px;
+}
+input:focus {
+  border-color: #FFC107; /* Yellow border on focus */
+}
+button[type="submit"] {
+  margin-top: 30px;
+}
+button[type="submit"]:hover {
+  background-color: #FFC107; /* Yellow on hover */
+}

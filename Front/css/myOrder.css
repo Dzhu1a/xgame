@@ -1,0 +1,35 @@
+.orders-container {
+  margin-top: 700px;
+  width: 80%;
+  margin: auto;
+}
+.orderItem {
+  border: 1px solid #E0E0E0; /* Light gray border */
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF; /* White background */
+}
+#orders-list {
+  margin-top: 200px;
+}
+.orderItem h2 {
+  margin-top: 0;
+  color: #000000; /* Black text */
+}
+.orderItem table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.orderItem table, .orderItem th, .orderItem td {
+  border: 1px solid #E0E0E0; /* Light gray border */
+}
+.orderItem th, .orderItem td {
+  padding: 8px;
+  text-align: left;
+}
+.orderItem th {
+  background-color: #E0E0E0; /* Light gray background */
+}
+.orderItem td {
+  color: #333333; /* Dark gray text */
+}

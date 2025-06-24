@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/sort.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="stylesheet" href="./css/autorization.css">
+    <link rel="stylesheet" href="./css/basket.css">
+    <link rel="stylesheet" href="./css/profil.css">
+    <link rel="stylesheet" href="./css/cont.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/myOrder.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>XGAME</title>
+</head>
+<body>
+    <div class="black">    
+    </div>
+    <div class="container">
+        <div class="menu">
+            <div class="category">
+                <div id="three">
+                    <img src="./img/three.png" alt="kategory">
+                </div>
+                <div class="img" id="categoryButton">
+                </div>
+                    <div class="boy" id="boyCategory">
+                        <div class="img-category">
+                            <img src="./img/man.png" alt="boy">
+                        </div>
+                        <div class="category-name">
+                            <p>Мерч </p>
+                        </div>
+                    </div>
+                    <div class="children" id="accessories">
+                        <div class="img-category">
+                            <img src="./img/acsesuare.png" alt="children">
+                        </div>
+                        <div class="category-name">
+                            <p>Аксесуари </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="emblem" id="emblem">
+                <div class="fashion">
+                    <img src="./img/logo.jpg" alt="fashion">
+                </div>
+            </div>
+            <script src="./js/emblem.js"></script>
+            <div class="right">
+                <div class="autorizatio">
+                    <div class="top">
+                        <a href="club.html" class="logo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                </div>
+                <div class="phone">
+                    <div class="top">
+                        <a href="contacts.html" class="logo"><i class="fas fa-phone"></i></a>
+                        </div>
+                </div>
+                <div class="add">
+                    <div class="top">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="sort" id="sort">
+                    <div class="top">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="korz">
+                    <div class="top">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="top">
+                        <i class="fas fa-clipboard-list"></i> 
+                    </div>
+                </div>
+                <div class="autorization">
+                    <div class="top">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search" id="searchContainer">
+                <input type="search" id="search" placeholder="Пошук">
+            </div>   
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="./img/567.jpg" alt="Big">
+            </div>
+            <div class="carousel-slide">
+                <img src="./img/12.jpg" alt="Tommy">
+            </div>
+            <div class="carousel-slide">
+                <img src="./img/2354.jpg" alt="Many">
+            </div>
+            
+            <div class="carousel-controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+            </div>
+            
+            <div class="carousel-indicators">
+                <div class="indicator-active"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <script src="./js/scrolling.js"></script>
+        <div class="carts"> </div>
+        
+    </div>
+    <div class="modal" id="editModal" >
+        <div class="close">
+            <div class="option">
+                <h2>XGAME Options</h2>
+            </div>
+            <div class="button-close">
+               <p>&times;</p>
+            </div>
+        </div>
+        <form id="addCartForm" action="information" enctype="multipart/form-data">
+            <div class="modalInput">
+                <label for="manufacturer">Виробник:</label>
+                <input type="text" name="manufacturer" id="modal-manufacturer" placeholder="Введіть виробника">
+            </div>
+           <div class="modalInput">
+            <label for="season">Сезон:</label>
+            <select name="season" id="modal-season">
+            <option value="" disabled selected>Введіть сезон</option>
+            <option value="Зима">Зима</option>
+            <option value="Весна">Весна</option>
+            <option value="Літо">Літо</option>
+            <option value="Осінь">Осінь</option>
+        </select>
+           </div>
+           <div class="modalInput">
+            <label for="gender">Категорія:</label>
+            <select name="gender" id="gend">
+                <option value="" disabled selected >Введіть категорію</option>
+                <option value="Мерч">Мерч</option>
+                <option value="Аксесуари">Аксесуари</option>
+            </select>
+           </div>
+           <div class="modalInput">
+            <label for="price">Ціна:</label>
+            <input type="number" id="modal-price" name="price" min="1" placeholder="Введіть ціну">
+           </div>
+           <div class="myFile">
+            <label for="images" >Виберіть фото</label>
+            <div class="file">
+                <input type="file" id="modal-img" name="img" accept="image/*" required>
+            </div>
+           </div>
+            <button  type="submit" id="buttonAdd">
+                Додати елемент
+            </button>
+            <button id="buttonEdite">
+                Редагувати елемент
+            </button>
+        </form> 
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./create/product.js"></script>
+    <script src="./js/sort.js"></script>
+    <div class="orders"></div>
+    <script src="./js/order.js"></script>
+    <div class="container-autorization">
+    
+        <div class="autoriz">
+            <div id="signInButton">
+                <button>Війти</button>
+            </div>
+            <div id="logInButton">
+                <button>Зареєструватися</button>
+            </div>
+        </div>
+        <div class="signIn">
+            <div class="buttonClose">
+                <p>&times;</p>
+            </div>
+            <div>
+                <label for="login">Введіть логін</label>
+                <input type="text" id="login" placeholder="логін">
+            </div>
+            <div>
+                <label for="password">Введіть пароль</label>
+                <input type="password" id="password" placeholder="пароль">
+            </div>
+            <div class="button-signIn">
+                <button id="signButton">Війти</button>
+            </div>
+            <div>
+                <p class="account">У вас немає акаунта?</p>
+                <button id="showLogInFromSignIn">Зареєструватися</button>
+            </div>
+        </div>
+        <div class="logIn">
+            <div class="buttonClose">
+                <p>&times;</p>
+            </div>
+            <form id="registrationForm">
+                <div>
+                    <label for="login">Введіть логін</label>
+                    <input type="text" id="loginn" name="login" placeholder="логін" required>
+                    <div class="error-message" id="loginError"></div>
+                </div>
+                <div>
+                    <label for="password">Введіть пароль</label>
+                    <input type="password" id="passwordd" name="password" placeholder="пароль" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <div>
+                    <label for="confirmPassword">Введіть ще раз пароль</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="пароль" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+                <div>
+                    <button type="submit" id="registerButton">Зареєструватися</button>
+                </div>
+            </form>
+            <div>
+                <p class="account">У вас є акаунт?</p>
+                <button id="showSignInFromLogIn">Війти</button>
+            </div>
+        </div>
+        <div class="paramentry" id="userMenu">
+            <div class="settings">
+                <button>Налаштування</button>
+            </div>
+            <div class="myOrder" id="myOrder">
+                <button>Мої замовлення</button>
+            </div>
+            <div class="exit">
+                <button id="logoutButton">Вихід</button>
+            </div>
+        </div>
+    </div>
+    <div class="profile-container">
+        <h1>Профіль користувача</h1>
+        <div class="profile-details">
+            <p><strong>Логін:</strong> <span id="user-login"></span></p>
+            <p><strong>Ім'я:</strong> <span id="user-name"></span></p>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <p><strong>Телефон:</strong> <span id="user-telphone"></span></p>
+            <p><strong>Місто:</strong> <span id="user-city"></span></p>
+            <p><strong>Адрес:</strong> <span id="user-adress"></span></p>
+            <p><strong>Відділення нової пошти:</strong> <span id="nova"></span></p>
+            <button id="button-edit">Редагувати</button>
+        </div>
+    </div>
+    <script src="./js/singUp.js"></script>
+    <div id="modalWindow" class="modalWindow">
+        <div class="modalWindow-content">
+            <span class="closeWindow">&times;</span>
+            <h2>Редагувати профіль</h2>
+            <form id="edit-form">
+                <label for="log">Логін:</label>
+                <input type="text" id="log" name="log"  required>
+            
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name"  required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"  required>
+            
+                <label for="telphone">Телефон:</label>
+                <input type="tel" id="telphone" name="telphone"  required>
+            
+                <label for="city">Місто:</label>
+                <input type="text" id="city" name="city"  required>
+            
+                <label for="adres">Адрес:</label>
+                <input type="text" id="adres" name="adres"  required>
+            
+                <label for="nov">Відділення нової пошти:</label>
+                <input type="text" id="nov" name="nov"  required>
+            
+                <button type="submit">Зберегти</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/edit.js"></script>
+    <div class="container-korz">
+        <div class="basket">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+                <div class="cart-items">
+                </div>
+            <div class="cart-footer">
+                <h3>Сума: $<span id="total-sum"></span></h3>
+                <button class="checkout-button">Оформити замовлення</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/basket.js"></script>
+    <div class="category-container" id="categoryContainer">
+        <div class="women" id="womenCategor">
+            <div class="img-category">
+                <img src="./img/woman.png" alt="women">
+            </div>
+            <div class="category-name">
+                <p>Жіночий Одяг</p>
+            </div>
+        </div>
+        <div class="boy" id="boyCategor">
+            <div class="img-category">
+                <img src="./img/man.png" alt="boy">
+            </div>
+            <div class="category-name">
+                <p>Чоловічий Одяг </p>
+            </div>
+        </div>
+        <div class="children" id="childrenCategor">
+            <div class="img-category">
+                <img src="./img/child.png" alt="children">
+            </div>
+            <div class="category-name">
+                <p>Дитячий Одяг </p>
+            </div>
+        </div>
+        <div class="children" id="accessorie">
+            <div class="img-category">
+                <img src="./img/acsesuare.png" alt="children">
+            </div>
+            <div class="category-name">
+                <p>Аксесуари </p>
+            </div>
+        </div>
+    </div>
+    <div class="orders-container">
+        <h1></h1>
+        <div id="orders-list"></div>
+    </div>
+    <script src="./js/search.js"></script>
+    <script src="./js/category.js"></script>
+    <script src="./js/autoruzation.js"></script>
+    <script src="./js/myorders.js"></script>
+</body>
+</html>

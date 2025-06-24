@@ -1,0 +1,354 @@
+body{
+  background-color: black;
+}
+.container {
+  z-index: 1;
+  width: 99%;
+  margin-top: -43px;
+  
+}
+.black {
+  background-color: black;
+  height: 52px;
+  z-index: 0;
+  margin: -8px;
+}
+img {
+  width: 40px;
+  height: 40px;
+}
+.menu {
+  display: grid;
+}
+.menu,.black{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.carousel-container {
+  position: relative;
+  width: 95%;
+  height: 350px;
+  overflow: hidden;
+  margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+}
+.carousel-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.active {
+  display: flex;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 70%;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.carousel-indicators div {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator-active {
+  background-color: rgb(47, 45, 45) !important;
+}
+
+.carousel-slide:nth-child(1) {
+  background-color: lightcoral;
+}
+
+.carousel-slide:nth-child(2) {
+  background-color: lightblue;
+}
+
+.carousel-slide:nth-child(3) {
+  background-color: lightgreen;
+}
+
+.carousel-slide:nth-child(4) {
+  background-color: lightyellow;
+}
+
+.carousel-slide:nth-child(5) {
+  background-color: lightpink;
+}
+.img-category img {
+  width: 100%; /* Розмір зображення */
+  height: 50px;
+  transition: filter 0.3s ease;
+}
+
+.img-category img:hover {
+  filter: brightness(0) invert(1) hue-rotate(200deg); /* Неоновий синій при наведенні */
+}
+#three{
+  display: none;
+}
+.category-name p {
+  margin: 5px 0;
+  font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+  font-size: 18px; /* Розмір 14px */
+  text-align: center;
+  font-weight: bold;
+}
+.add-img {
+  margin-left: 30px;
+}
+.search {
+  position: absolute;
+  margin-top: 3px;
+  right: 130px;
+  display: none;
+}
+.search.active {
+    display: block; /* Показуємо, коли додаємо клас .active */
+  }
+.emblem {
+  color: white;
+  font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+  font-size: 18px; 
+  font-weight: bold;
+}
+.emblem img{
+  width: 70px;
+  margin-top: 2px;
+}
+.add,
+.order {
+  display: none; /*для користувача*/
+}
+.phone,
+.add,
+.sort,
+.korz,
+.order,
+.autorization,
+.autorizatio {
+  text-align: center;
+  color: #fff;
+  margin-top: 7.2px;
+}
+.top i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.top i:hover {
+  color: #00f; /* Неоновий синій, як у вашому логотипі Xgame */
+}
+
+@media screen and (max-width: 750px) {
+  .menu {
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 50px 100px;
+    min-width: 300px;
+  }
+  .category {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .p,
+  .bottom {
+    display: none;
+  }
+  #three{
+    display: block !important;
+    z-index: 2000;
+    margin-top: 6px;
+    margin-left: -3px;
+    width: 40px;
+  }
+  #three img{
+    width: 100%;
+  }
+  .category .women,
+  .category .boy,
+  .category .children{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    display: none;
+  }
+  .img-category {
+    width: 50px;
+  }
+  .img-category img {
+    width: 100%; 
+    transition: filter 0.3s ease;
+  }
+  .emblem {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+  }
+  .right {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin-left: 20px;
+  }
+  .top {
+    margin-right: 20px;
+  }
+  .carousel-container{
+    width: 99%;
+    margin-left: 13px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 990px) {
+  .menu {
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 80px 70px;
+  }
+  .category {
+    display: flex;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin-top: -36px; 
+    gap: 3px; 
+    width: 150%;
+    background-color: #fff;
+  }
+  .category-name{
+    margin-left:5px;
+    margin-top: 10px;
+  }
+  .women,
+  .boy,
+  .children {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .p,
+  .bottom {
+    display: none;
+  }
+  .emblem {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+  }
+  .right {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search {
+    grid-column: 2/3;
+    grid-row: 2/2;
+  }
+  .top {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .menu {
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 43px 70px;
+  }
+  .category {
+    display: flex;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding-top: 10px;
+    width: 102.1%;
+    margin-left: -8px;
+    background-color: #fff;
+  }
+  .women,
+  .boy,
+  .children {
+    display: flex;
+    gap: 5px;
+  }
+  .women p,
+  .boy p,
+  .children p {
+    padding: 10px;
+  }
+  .emblem {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+  }
+  .right {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search {
+    grid-column: 3/3;
+    grid-row: 1/2;
+  }
+  .top {
+    margin-right: 20px;
+  }
+  .bottom {
+    margin-right: 20px;
+  }
+}

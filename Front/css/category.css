@@ -1,0 +1,114 @@
+.category-container,
+.container-boy,
+.container-women,
+.children-girl,
+.baby,
+.container-children,
+.children-boy {
+  z-index: 2000;
+  position: fixed;
+  background-color: #FFFFFF; /* White background */
+  border: 2px solid #000000; /* Black border */
+  border-radius: 10px;
+  width: 150px;
+  height: 320px;
+  display: none;
+}
+.category-container .women,
+.category-container .boy,
+.category-container .children {
+  margin-top: 20px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+.category-container .women p,
+.category-container .boy p,
+.category-container .children p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #000000; /* Black text */
+}
+.category-woman,
+.category-boy,
+.category-children,
+.container-girl,
+.containerBoy,
+.container-baby {
+  display: flex;
+  flex-direction: row;
+}
+#containerWomen div:hover,
+#containerBoy div:hover,
+#childrenGirl div:hover,
+#childrenBoy div:hover,
+#baby div:hover {
+  background-color: #E0E0E0; /* Light gray on hover */
+}
+.left {
+  margin-right: 17%;
+  margin-left: 5%;
+}
+.leftBoy {
+  margin-right: 10%;
+  margin-left: 5%;
+}
+.right {
+  margin-top: 3px;
+}
+.containerRight {
+  margin-top: 2px;
+  margin-left: 37%;
+}
+.leftBaby {
+  margin-right: 34%;
+}
+.container-boy,
+.container-women,
+.children-boy,
+.children-girl {
+  display: none;
+}
+@media screen and (max-width: 770px) {
+  .category-container {
+    top: 90px;
+    left: 15px;
+    background-color: #FFFFFF; /* White background */
+  }
+  .container-boy,
+  .container-women,
+  .container-children {
+    top: 0;
+    left: 19%;
+    width: 24%;
+  }
+  .children-boy,
+  .children-girl,
+  .baby {
+    top: 0;
+    left: 44%;
+    width: 24%;
+  }
+}
+@media screen and (min-width: 770px) {
+  .category-container {
+    top: 88px;
+    left: 0;
+    width: 150px;
+  }
+  .container-boy,
+  .container-women,
+  .container-children {
+    top: 88px;
+    left: 154px;
+    width: 150px;
+  }
+  .children-boy,
+  .children-girl,
+  .baby {
+    top: 88px;
+    left: 308px;
+    width: 113px;
+  }
+}
